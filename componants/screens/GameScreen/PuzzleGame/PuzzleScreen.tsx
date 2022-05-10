@@ -2,7 +2,7 @@ import React from "react";
 import { ActivityIndicator, Button, Text, View } from "react-native";
 import { PicturePuzzle, PuzzlePieces } from "react-native-picture-puzzle";
 
-export function GameScreen({ navigation }:any) {
+export function PuzzleScreen({ navigation }:any) {
 
   const [hidden, setHidden] = React.useState<number | null>(0); // piece to obscure
   const [pieces, setPieces] = React.useState<PuzzlePieces>([0, 1, 2, 3, 4, 5, 6, 7, 8]);
@@ -15,9 +15,6 @@ export function GameScreen({ navigation }:any) {
     setHidden(nextHidden);
   }, [setPieces, setHidden]);
 
-  
-let randomItem = pieces;
-console.log(randomItem);
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <PicturePuzzle
@@ -31,7 +28,7 @@ console.log(randomItem);
       <Text>Game Screen</Text>
       <Button
         title="Go to Game... again"
-        onPress={() => navigation.push('Game')}
+        onPress={() => navigation.push('Puzzle')}
       />
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go to Details" onPress={() => navigation.navigate('Details')} />

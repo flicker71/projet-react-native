@@ -9,12 +9,14 @@ import { globalStyles } from './Styles/style';
 import axios from "axios";
 import { HomeScreen } from './componants/screens/HomeScreen/homeScreen';
 import { DetailsScreen } from './componants/screens/DetailsScreen/DetailsScreen';
-import { GameScreen } from './componants/screens/GameScreen/GameScreen';
+import { PuzzleScreen } from './componants/screens/GameScreen/PuzzleGame/PuzzleScreen';
+import { TicTacToeScreen } from './componants/screens/GameScreen/TicTacToeGame/TicTacToeScreen';
 
 export type AppNavigator = {
   Home : undefined,
   Details: undefined,
-  Game: undefined,
+  Puzzle: undefined,
+  TicTacToe: undefined
 }  
 
 const Stack = createNativeStackNavigator<AppNavigator>();
@@ -33,7 +35,8 @@ export default function App() {
           <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />
-            <Stack.Screen name="Game" component={GameScreen} />
+            <Stack.Screen name="Puzzle" component={PuzzleScreen} />
+            <Stack.Screen name="TicTacToe" component={TicTacToeScreen} />
           </Stack.Navigator>
         </NavigationContainer>
     );

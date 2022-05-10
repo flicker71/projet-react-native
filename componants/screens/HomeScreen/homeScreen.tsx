@@ -23,8 +23,12 @@ export function HomeScreen({ navigation }:any) {
           onPress={() => navigation.navigate('Details')}
         />
         <Button
-          title="Go to Game"
-          onPress={() => navigation.navigate('Game')}
+          title="Go to Puzzle"
+          onPress={() => navigation.navigate('Puzzle')}
+        />
+        <Button
+          title="Go to TicTacToe"
+          onPress={() => navigation.navigate('TicTacToe')}
         />
       </View>
     );
