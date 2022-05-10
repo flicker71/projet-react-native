@@ -7,54 +7,15 @@ import Footer from './componants/Footer/Footer';
 import Header from './componants/Header/Header';
 import { globalStyles } from './Styles/style';
 import axios from "axios";
-
-
-
+import { HomeScreen } from './componants/screens/HomeScreen/homeScreen';
+import { DetailsScreen } from './componants/screens/DetailsScreen/DetailsScreen';
+import { GameScreen } from './componants/screens/GameScreen/GameScreen';
 
 export type AppNavigator = {
   Home : undefined,
-  Details: undefined
+  Details: undefined,
+  Game: undefined,
 }  
-
-function HomeScreen({ navigation }:any) {
-  
-  const [dessert, setDessert] = useState([]);
-
-  
-  useEffect(() => {
-    (async () => {
-      const data = await axios.get("https://random-data-api.com/api/dessert/random_dessert?size=10")
-      setDessert(data.data)
-    })()
-  }, []);
-console.log(dessert);
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      
-      
-      <Text>Home Screen {dessert && dessert[0] && dessert[0].flavor}</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-    </View>
-  );
-}
-
-function DetailsScreen({ navigation }:any) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button
-        title="Go to Details... again"
-        onPress={() => navigation.push('Details')}
-      />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-
 
 const Stack = createNativeStackNavigator<AppNavigator>();
 
@@ -66,13 +27,13 @@ export default function App() {
   const changerHeaderName = ((title:string) => {
     setHeaderName( title );
   })
-
   
     return (
         <NavigationContainer>
           <Stack.Navigator initialRouteName="Home">
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen name="Game" component={GameScreen} />
           </Stack.Navigator>
         </NavigationContainer>
     );

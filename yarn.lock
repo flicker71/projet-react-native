@@ -5464,6 +5464,11 @@ react-native-gradle-plugin@^0.0.6:
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.0.6.tgz#b61a9234ad2f61430937911003cddd7e15c72b45"
   integrity sha512-eIlgtsmDp1jLC24dRn43hB3kEcZVqx6DUQbR0N1ABXGnMEafm9I3V3dUUeD1vh+Dy5WqijSoEwLNUPLgu5zDMg==
 
+react-native-picture-puzzle@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-picture-puzzle/-/react-native-picture-puzzle-1.0.0.tgz#3f4824ab7c089a9e01b124edb57daac4dfe0c5c2"
+  integrity sha512-2NzGOhE03uI7KdZsyV4syiMzp+GHNuL69w0RA9fufC5bLv00C3eSEqxT0WS2dMKtnDcsCiDU2KkZ2ISqW4SKrQ==
+
 react-native-safe-area-context@^4.2.5:
   version "4.2.5"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-4.2.5.tgz#23006dc1a398bb825d7d795c27f1c46119efe8a5"
